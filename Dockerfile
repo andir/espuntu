@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 RUN echo "deb http://archive.ubuntu.com/ubuntu/ xenial multiverse" >> /etc/apt/sources.list.d/multiverse.list
-RUN apt-get update && apt-get install -y make unrar autoconf automake libtool libtool gcc g++ gperf flex bison texinfo gawk ncurses-dev libexpat1-dev python sed python-serial srecord bc git wget bzip2 unzip libtool-bin
+RUN apt-get update && apt-get install -y make unrar autoconf automake libtool libtool gcc g++ gperf flex bison texinfo gawk ncurses-dev libexpat1-dev python sed python-serial srecord bc git wget bzip2 unzip libtool-bin help2man
 RUN useradd frickler 
 RUN chown frickler:frickler /opt/
 RUN su -c "bash -c 'cd /opt/ && git clone https://github.com/pfalcon/esp-open-sdk.git'" frickler
